@@ -99,6 +99,24 @@ Seçenekler: `POFYLAND_VERSION=v1.0.1` (belirli sürüm), `POFYLAND_DEST=~/Appli
 - Yeni sürüm çıkınca Pofyland bildirir (günde bir kez buraya bakar, kendiliğinden indirmez). Güncellemek için kurulum komutunu yeniden çalıştır.
 - Kaldırmak için Pofyland menüsü → **Kaldır**. Uygulamayı, arka plan sunucusunu ve Claude eklentisini kaldırır; istersen anahtarları ve ayarları da.
 
+## Pofy gelmiyor? Tanı
+
+Claude, Codex ya da Antigravity oturumu açtın ama denizde Pofy yoksa, o Mac'te Terminal'e şunu yapıştır:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/konuksev/Pofyland/main/doctor.sh | sh
+```
+
+Hiçbir şeyi değiştirmez; uygulamayı, arka plan sunucusunu, Claude eklentisini ve Codex / Antigravity komutlarını denetler, ✓ / ✗ ile yazar.
+En sık neden Claude eklentisinin kurulmamış olmasıdır (sihirbazda "Eklentiyi kur" atlanmış ya da `claude` komutu yokmuş). Eksikse onarmak için:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/konuksev/Pofyland/main/doctor.sh | sh -s -- --fix
+```
+
+Eklenti kurulduktan sonra açık Claude oturumlarını ve Claude uygulamasını kapatıp yeniden aç; yeni oturumlar denize gelir.
+Çözülmezse çıktıyı olduğu gibi [Issue](https://github.com/konuksev/Pofyland/issues) olarak gönder.
+
 ## Sık sorulanlar
 
 **Pofy denize gelmiyor.** Eklenti kurulu mu: Pofyland menüsü → Kurulum adımları → "Claude eklentisi". Eklenti kurulduktan sonra açık
