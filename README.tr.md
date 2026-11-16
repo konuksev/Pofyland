@@ -7,8 +7,6 @@ görürsün; bekleyene Mac'ten ya da telefonundan cevap verirsin.
 
 ![Bir terminal, sonra bir düzine. Hangisi seni bekliyor? Pofyland'da her ajan bir Pofy olur.](docs/pofyland-kaos.gif)
 
-<p align="center"><a href="docs/pofyland-kaos-tr.mp4">▶ Tam video, 63 sn</a> · <a href="docs/pofyland-mac.png">Mac'te deniz görünümü</a></p>
-
 ## Kimin için
 
 Birden fazla Claude Code oturumunu paralel yürüten, bu yüzden sürekli "hangi terminal neredeydi, hangisi izin bekliyordu" diye
@@ -23,6 +21,8 @@ alırsın, masadan kalkınca iş durmaz.
 - Her proje dipte kendi adasıdır; adadaki mercan projenin commit sayısıyla büyür, yakında çalışılan proje öne gelir.
 - İki oturum aynı dosyayı düzenliyorsa aralarındaki bağ kırmızıya döner ve dosya adı yazar ("⚠ game.ts").
 - Üst çubukta kaç oturum seni bekliyor, bugün kaç iş bitti, kaç sorun var ve Claude / Codex limitlerinin yüzde kaçı kullanıldı.
+
+![Mac'te deniz: üç oturum camda bekliyor, kalanlar adalarının üstünde çalışıyor](docs/pofyland-mac.png)
 
 **Bekleyene cevap**
 - İzin isteklerine, sorulara ve plan onaylarına Pofyland'dan cevap verirsin; terminale gitmen gerekmez. Mesaj da yazabilirsin.

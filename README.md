@@ -9,8 +9,6 @@ without hopping between windows, and you answer from your Mac or your phone.
 
 ![One terminal, then a dozen. Which one is waiting for you? In Pofyland every agent becomes a Pofy.](docs/pofyland-kaos.gif)
 
-<p align="center"><a href="docs/pofyland-kaos-en.mp4">▶ Full video, 39 s</a> · <a href="docs/pofyland-mac-en.png">The sea on a Mac</a></p>
-
 ## Who it's for
 
 Developers who run several Claude Code sessions in parallel and keep asking "which terminal was that, which one needed my OK".
@@ -26,6 +24,8 @@ stall when you step away.
 - Every project is an island on the sea floor; its coral grows with the project's commits, and recently active projects come forward.
 - If two sessions edit the same file, the bond between them turns red with the file name ("⚠ game.ts").
 - The top bar shows how many sessions are waiting for you, what finished today, how many problems, and how much of your Claude / Codex limits is used.
+
+![The sea on a Mac: three sessions waiting at the glass, the rest working above their project islands](docs/pofyland-mac-en.png)
 
 **Answering**
 - Permission requests, questions and plan approvals are answered right in Pofyland, no trip to the terminal. You can type a message too.
@@ -88,6 +88,8 @@ No `sudo`; it only writes to the Applications folder. Under a minute.
 3. **Phone:** install [Tailscale](https://tailscale.com) on the Mac and the phone, sign in with the same account, press "Open Pofyland on Tailscale",
    scan the QR code. In Safari, Share → Add to Home Screen gives you notifications too. You can do this later: Pofyland menu → Setup steps.
 4. **Ready:** open a Claude Code session and give it a task. The line turns to "Pofy is in the sea" within seconds.
+
+<p align="center"><img src="docs/onboarding-ready-en.png" width="520" alt="Ready: the checklist and the live line showing the first Pofy in the sea"></p>
 
 Then: clicking the Pofy in the menu bar opens and closes the sea; right-click opens the list view (waiting, working, finished).
 
