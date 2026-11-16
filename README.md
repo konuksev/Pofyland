@@ -79,6 +79,9 @@ curl -fsSL https://raw.githubusercontent.com/konuksev/Pofyland/main/install.sh |
 The script downloads the latest release, copies **Pofyland** into **Applications**, clears the quarantine flag and opens it.
 No `sudo`; it only writes to the Applications folder. Under a minute.
 
+> **Official source:** install Pofyland only from `github.com/konuksev/Pofyland`, with the command above or the
+> [releases](https://github.com/konuksev/Pofyland/releases) page. Copies or forks elsewhere are not maintained or checked.
+
 **First launch** is a four-step guide:
 
 <p align="center"><img src="docs/onboarding-en.png" width="520" alt="First launch: install the Claude plugin"></p>

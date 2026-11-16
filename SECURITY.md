@@ -41,3 +41,5 @@ an attacker who already controls your macOS user account.
 - The app is not yet signed with an Apple Developer ID; `install.sh` removes the quarantine flag. Signing and
   notarization are planned.
 - Keys live under `~/Library/Application Support/PofyAqua`, readable only by your user account.
+- The only official source is this repo (`github.com/konuksev/Pofyland`) and its releases. Install scripts or builds
+  from forks and other copies are not maintained or reviewed; a changed `install.sh` there could install anything.

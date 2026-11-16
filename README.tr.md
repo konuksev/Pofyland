@@ -78,6 +78,9 @@ curl -fsSL https://raw.githubusercontent.com/konuksev/Pofyland/main/install.sh |
 Betik en son sürümün dmg'sini indirir, **Pofyland**'ı **Applications**'a kopyalar, karantina damgasını kaldırır ve açar.
 `sudo` istemez, yalnızca uygulama klasörüne yazar. Bir dakikadan kısa sürer.
 
+> **Resmi kaynak:** Pofyland'ı yalnızca `github.com/konuksev/Pofyland` adresinden kur: yukarıdaki komutla ya da
+> [sürümler](https://github.com/konuksev/Pofyland/releases) sayfasından. Başka yerdeki kopyalar ve fork'lar bakımlı ya da denetlenmiş değildir.
+
 **İlk açılış** üç adımlık bir sihirbazdır:
 1. **Bildirimler:** izin ver ki bir Pofy seni beklerken haber gelsin.
 2. **Claude eklentisi:** "Eklentiyi kur"a bas. Açık Claude oturumların yeniden başlayınca denize gelir, yenileri hemen görünür.
