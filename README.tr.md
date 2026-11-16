@@ -5,7 +5,7 @@ Claude Code (ayrıca Codex ve Antigravity) oturumlarının her biri bir "Pofy"di
 cama gelip seslenir, işi biten dibe iner. Pencereler arasında dolaşmadan kimin ne yaptığını ve kimin seni beklediğini bir bakışta
 görürsün; bekleyene Mac'ten ya da telefonundan cevap verirsin.
 
-[English](README.md) · [Telegram topluluğu](https://t.me/+nYWyvW484xxmYjBk)
+[![Telegram](https://img.shields.io/badge/Telegram-topluluk-26A5E4?logo=telegram&logoColor=white)](https://t.me/+nYWyvW484xxmYjBk) [English](README.md)
 
 ![Bir terminal, sonra bir düzine. Hangisi seni bekliyor? Pofyland'da her ajan bir Pofy olur.](docs/pofyland-kaos-tr.gif)
 

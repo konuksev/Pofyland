@@ -5,7 +5,7 @@ Each Claude Code session (Codex and Antigravity too) is a "Pofy": the ones worki
 answer come up to the glass and call you, the finished ones settle on the bottom. You see who is doing what and who is waiting
 without hopping between windows, and you answer from your Mac or your phone.
 
-[Türkçe](README.tr.md) · [Telegram community](https://t.me/+nYWyvW484xxmYjBk)
+[![Telegram](https://img.shields.io/badge/Telegram-community-26A5E4?logo=telegram&logoColor=white)](https://t.me/+nYWyvW484xxmYjBk) [Türkçe](README.tr.md)
 
 ![One terminal, then a dozen. Which one is waiting for you? In Pofyland every agent becomes a Pofy.](docs/pofyland-kaos.gif)
 
