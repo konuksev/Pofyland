@@ -5,7 +5,9 @@ Claude Code (ayrıca Codex ve Antigravity) oturumlarının her biri bir "Pofy"di
 cama gelip seslenir, işi biten dibe iner. Pencereler arasında dolaşmadan kimin ne yaptığını ve kimin seni beklediğini bir bakışta
 görürsün; bekleyene Mac'ten ya da telefonundan cevap verirsin.
 
-![Pofyland: Mac'te deniz görünümü](docs/pofyland-mac.png)
+![Bir terminal, sonra bir düzine. Hangisi seni bekliyor? Pofyland'da her ajan bir Pofy olur.](docs/pofyland-kaos.gif)
+
+<p align="center"><a href="docs/pofyland-kaos-tr.mp4">▶ Tam video, 63 sn</a> · <a href="docs/pofyland-mac.png">Mac'te deniz görünümü</a></p>
 
 ## Kimin için
 
