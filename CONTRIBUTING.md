@@ -19,7 +19,7 @@ separate repo. That still leaves plenty to do here.
 
 ## Pull requests
 
-What can change here: `README.md`, `README.tr.md` (keep both languages in step), `docs/`, `install.sh`, `doctor.sh`.
+What can change here: `README.md`, `docs/`, `install.sh`, `doctor.sh`.
 
 1. Fork, make a branch, keep the change small and about one thing.
 2. The scripts are POSIX `sh` and must run on a stock Mac (macOS 13+). No new dependencies, no `sudo`.
@@ -30,7 +30,7 @@ What can change here: `README.md`, `README.tr.md` (keep both languages in step),
 
 ## Language
 
-English or Turkish, both are fine in issues and pull requests.
+Please write issues and pull requests in English.
 
 By contributing you agree that your contribution is licensed under the [MIT License](LICENSE) of this repo, and that
 you follow the [code of conduct](CODE_OF_CONDUCT.md).

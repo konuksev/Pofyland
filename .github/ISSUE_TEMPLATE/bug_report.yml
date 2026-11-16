@@ -7,7 +7,7 @@ body:
       value: |
         Thanks for reporting. If no Pofy shows up, run the doctor first; it often names the cause:
         `curl -fsSL https://raw.githubusercontent.com/konuksev/Pofyland/main/doctor.sh | sh`
-        English or Turkish are both fine.
+        Please write in English.
   - type: textarea
     id: what
     attributes:

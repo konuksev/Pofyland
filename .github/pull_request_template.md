@@ -10,4 +10,4 @@
 
 - [ ] Scripts stay POSIX `sh`, no new dependencies, no `sudo`
 - [ ] `doctor.sh` still changes nothing without `--fix`
-- [ ] `README.md` and `README.tr.md` updated together (if docs changed)
+- [ ] `README.md` updated (if docs changed)
