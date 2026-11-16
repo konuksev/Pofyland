@@ -142,4 +142,10 @@ Still stuck? Paste the output into an [issue](https://github.com/konuksev/Pofyla
 ## Issues and ideas
 
 This repo holds the downloadable releases and the install scripts; the source lives in a separate repo.
-Found a problem or have an idea? Open an [issue](https://github.com/konuksev/Pofyland/issues).
+Found a problem? Open a [bug report](https://github.com/konuksev/Pofyland/issues/new?template=bug_report.yml).
+Have an idea or a question? Start a thread in [Discussions](https://github.com/konuksev/Pofyland/discussions); see what's planned on the
+[roadmap](https://github.com/users/konuksev/projects). How to help: [CONTRIBUTING.md](CONTRIBUTING.md). Security problems: [SECURITY.md](SECURITY.md).
+
+## License
+
+The scripts and docs in this repo are under the [MIT License](LICENSE). The Pofyland app, its name and the Pofy character are not covered by it.

@@ -1,0 +1,55 @@
+name: Bug report
+description: Something in Pofyland doesn't work as expected.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. If no Pofy shows up, run the doctor first; it often names the cause:
+        `curl -fsSL https://raw.githubusercontent.com/konuksev/Pofyland/main/doctor.sh | sh`
+        English or Turkish are both fine.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect, what happened instead? Screenshots help.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where?
+      multiple: true
+      options:
+        - Install / update
+        - Sea window on the Mac
+        - Menu bar
+        - Phone (PWA) / push notifications
+        - Answering a permission or question
+        - Claude Code plugin
+        - Codex
+        - Antigravity
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Pofyland version
+      description: Pofyland menu → About
+      placeholder: "1.0.4"
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version and chip
+      placeholder: "macOS 15.5, Apple Silicon"
+    validations:
+      required: true
+  - type: textarea
+    id: doctor
+    attributes:
+      label: doctor.sh output
+      description: Paste the whole output. It contains paths and versions, nothing secret.
+      render: text

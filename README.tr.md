@@ -135,4 +135,10 @@ kapat (Sistem Ayarları → Pil → Seçenekler, ya da Pofyland'ın Kurulum adı
 ## Sorun / öneri
 
 Bu depo yalnızca indirilecek sürümleri ve kurulum betiğini tutar; kaynak kod ayrı bir depodadır.
-Bir sorun ya da önerin varsa [Issue](https://github.com/konuksev/Pofyland/issues) aç.
+Bir sorun bulduysan [hata bildirimi](https://github.com/konuksev/Pofyland/issues/new?template=bug_report.yml) aç.
+Fikir ya da soru için [Discussions](https://github.com/konuksev/Pofyland/discussions)'ta konu başlat; planlananlar
+[yol haritasında](https://github.com/users/konuksev/projects). Nasıl yardım edilir: [CONTRIBUTING.md](CONTRIBUTING.md). Güvenlik sorunları: [SECURITY.md](SECURITY.md).
+
+## Lisans
+
+Bu depodaki betikler ve belgeler [MIT Lisansı](LICENSE) altındadır. Pofyland uygulaması, adı ve Pofy karakteri bu lisansın kapsamında değildir.

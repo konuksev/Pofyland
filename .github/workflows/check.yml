@@ -1,0 +1,58 @@
+name: Check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  release:
+    types: [published]
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: Lint scripts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Syntax
+        run: sh -n install.sh && sh -n doctor.sh
+      - name: ShellCheck
+        run: shellcheck --shell=sh --severity=error install.sh doctor.sh
+
+  release:
+    name: Latest release has both dmgs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          assets=$(gh release view -R "$GITHUB_REPOSITORY" --json tagName,assets --jq '.tagName as $t | .assets[].name | "\($t) \(.)"')
+          echo "$assets"
+          echo "$assets" | grep -q -- '-arm64\.dmg$'  || { echo "::error::arm64 dmg missing"; exit 1; }
+          echo "$assets" | grep -q -- '-x86_64\.dmg$' || { echo "::error::x86_64 dmg missing"; exit 1; }
+
+  install:
+    name: One-line install on macOS
+    needs: release
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install with install.sh
+        env:
+          POFYLAND_DEST: ${{ runner.temp }}/Applications
+          POFYLAND_NO_OPEN: "1"
+        run: sh install.sh
+      - name: App bundle looks right
+        run: |
+          APP="$RUNNER_TEMP/Applications/Pofyland.app"
+          test -d "$APP/Contents/Resources/plugin/pofy-live"
+          defaults read "$APP/Contents/Info.plist" CFBundleShortVersionString
+          codesign --verify --deep "$APP" && echo "signature ok" || echo "::warning::codesign verify failed (ad-hoc signed build)"
+      - name: doctor.sh runs
+        run: sh doctor.sh | tee doctor.txt
