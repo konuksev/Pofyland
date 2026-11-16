@@ -1,138 +1,143 @@
 # Pofyland
 
-**Aynı anda çalışan yapay zekâ kodlama oturumlarını tek ekranda, canlı denizanaları olarak gösteren Mac uygulaması.**
-Claude Code (ayrıca Codex ve Antigravity) oturumlarının her biri bir "Pofy"dir: çalışan yüzer, senden izin ya da cevap bekleyen
-cama gelip seslenir, işi biten dibe iner. Pencereler arasında dolaşmadan kimin ne yaptığını ve kimin seni beklediğini bir bakışta
-görürsün; bekleyene Mac'ten ya da telefonundan cevap verirsin.
+**A Mac app that shows every running AI coding session as a live jellyfish, all in one sea.**
+Each Claude Code session (Codex and Antigravity too) is a "Pofy": the ones working swim, the ones waiting for your permission or
+answer come up to the glass and call you, the finished ones settle on the bottom. You see who is doing what and who is waiting
+without hopping between windows, and you answer from your Mac or your phone.
 
-![Bir terminal, sonra bir düzine. Hangisi seni bekliyor? Pofyland'da her ajan bir Pofy olur.](docs/pofyland-kaos.gif)
+[Türkçe](README.tr.md)
 
-<p align="center"><a href="docs/pofyland-kaos-tr.mp4">▶ Tam video, 63 sn</a> · <a href="docs/pofyland-mac.png">Mac'te deniz görünümü</a></p>
+![One terminal, then a dozen. Which one is waiting for you? In Pofyland every agent becomes a Pofy.](docs/pofyland-kaos.gif)
 
-## Kimin için
+<p align="center"><a href="docs/pofyland-kaos-en.mp4">▶ Full video, 39 s</a> · <a href="docs/pofyland-mac-en.png">The sea on a Mac</a></p>
 
-Birden fazla Claude Code oturumunu paralel yürüten, bu yüzden sürekli "hangi terminal neredeydi, hangisi izin bekliyordu" diye
-dolaşan geliştiriciler için. Tek oturumla çalışıyorsan da işe yarar: Claude seni beklerken Mac'in köşesinde ve telefonunda bildirim
-alırsın, masadan kalkınca iş durmaz.
+## Who it's for
 
-## Ne yapar
+Developers who run several Claude Code sessions in parallel and keep asking "which terminal was that, which one needed my OK".
+It helps with a single session too: you get a notification on the Mac and on your phone when Claude is waiting, so work doesn't
+stall when you step away.
 
-**Tek bakışta durum**
-- Her oturum bir Pofy. Konumu durumunu söyler: **yüzen** çalışıyor, **camda sana bakan** izin ya da cevap bekliyor, **dipteki** boşta.
-- Balonunda son isteği ve ne yaptığı yazar ("Düşünüyor · 10 sn", "Yazıyor", "Bash izni bekliyor · 1 dk"). Üstüne gelince kart büyür.
-- Her proje dipte kendi adasıdır; adadaki mercan projenin commit sayısıyla büyür, yakında çalışılan proje öne gelir.
-- İki oturum aynı dosyayı düzenliyorsa aralarındaki bağ kırmızıya döner ve dosya adı yazar ("⚠ game.ts").
-- Üst çubukta kaç oturum seni bekliyor, bugün kaç iş bitti, kaç sorun var ve Claude / Codex limitlerinin yüzde kaçı kullanıldı.
+## What it does
 
-**Bekleyene cevap**
-- İzin isteklerine, sorulara ve plan onaylarına Pofyland'dan cevap verirsin; terminale gitmen gerekmez. Mesaj da yazabilirsin.
-- Birden çok Pofy beklerken kartlar sıraya girer; ‹ › ile geçersin.
-- "Pofy karar versin" seçeneği soruyu bağlamı bilen Claude'a bırakır ve nedenini söyler.
-- Modeli ve kipi (plan, otomatik) karttan değiştirir, oturumu durdurursun.
+**Status at a glance**
+- Every session is a Pofy. Where it is tells you its state: **swimming** means working, **at the glass looking at you** means waiting
+  for a permission or an answer, **on the bottom** means idle.
+- Its bubble shows the last request and what it's doing ("Thinking · 10 s", "Writing", "Bash permission · 1 min"). Hover and the card grows.
+- Every project is an island on the sea floor; its coral grows with the project's commits, and recently active projects come forward.
+- If two sessions edit the same file, the bond between them turns red with the file name ("⚠ game.ts").
+- The top bar shows how many sessions are waiting for you, what finished today, how many problems, and how much of your Claude / Codex limits is used.
 
-**Telefon**
-- Aynı deniz telefonda da açılır (Safari'de "Ana Ekrana Ekle" ile uygulama gibi). Bir Pofy seni beklemeye başlayınca telefona
-  bildirim gelir; dokununca kart açılır, oradan izin verirsin. Bağlantı Tailscale üzerinden yalnızca senin cihazlarına açıktır.
+**Answering**
+- Permission requests, questions and plan approvals are answered right in Pofyland, no trip to the terminal. You can type a message too.
+- When several Pofys are waiting, the cards queue up; ‹ › moves between them.
+- "Let Pofy decide" hands the question to Claude, which knows the context, and tells you why.
+- Switch the model or the mode (plan, auto) from the card, or stop the session.
 
-<p align="center"><img src="docs/pofyland-telefon.png" width="340" alt="Pofyland telefonda: bekleyen oturumun kartı"></p>
+**Phone**
+- The same sea opens on your phone (add it to the Home Screen from Safari). When a Pofy starts waiting you get a push notification;
+  tap it, the card opens, you approve from there. The connection runs over Tailscale and is open only to your own devices.
 
-**Bildirimler ve günün özeti**
-- macOS bildirimi: bir Pofy seni beklemeye başlayınca ve uzun bir iş bitince (süresi ve sonucuyla). Tıklayınca o oturuma gider.
-- "Bugün" kartı: biten işler, süreler, commit'ler, sorunlar. Akşam tek bakışta ne yapıldığını görürsün.
+<p align="center"><img src="docs/pofyland-phone-en.png" width="340" alt="Pofyland on a phone: the waiting session's card"></p>
 
-**Yardımcılar (isteğe bağlı, hepsi önce sorar)**
-- Pofyland örüntü görünce önerir: "iş bitince commit atayım mı", "limit dolmak üzere, bu işi Codex'e vereyim mi", "açık PR'ındaki yeni yorumları
-  Pofy'ye ileteyim mi". Bir kez "hep yap" dersen sonra kendisi yapar; Öğrendiklerim listesinden kapatırsın.
-- Kanıt: Pofy bir sayfayı düzenleyip "bitti" deyince ve projenin önizleme sunucusu açıksa telefon ve masaüstü boyunda ekran görüntüsü alınır;
-  sözüne değil görüntüye bakarsın.
-- Ulak: Gmail bağlarsan gelen kutuna düşen mail bir Ulak olarak gelir, özetler, yanıt taslağı önerir; gönderme kararı sende.
+**Notifications and the day**
+- macOS notifications when a Pofy starts waiting and when a long job ends (with its duration and result). Click to jump to the session.
+- A "Today" card: finished jobs, durations, commits, problems. One look in the evening tells you what got done.
 
-## Nasıl çalışır
+**Helpers (optional, they always ask first)**
+- Pofyland notices patterns and offers: "commit when the job is done?", "your limit is nearly used up, hand this to Codex?",
+  "forward the new comments on your open PR to the Pofy?". Say "always" once and it does it on its own; switch it off in the list of learned rules.
+- Proof: when a Pofy edits a page and says "done", and the project's preview server is up, a phone-size and a desktop-size screenshot
+  are taken; you judge the picture, not the claim.
+- Ulak: connect Gmail and each new mail arrives as a courier that summarizes it and drafts a reply; sending stays your decision.
+
+## How it works
 
 ```
-Claude Code / Codex / Antigravity oturumları
-        │  Claude Code eklentisi (hook'lar) her oturumun durumunu yazar
+Claude Code / Codex / Antigravity sessions
+        │  the Claude Code plugin (hooks) writes each session's state
         ▼
-Pofyland uygulaması (menü çubuğu + deniz penceresi + macOS bildirimleri)
+Pofyland app (menu bar + sea window + macOS notifications)
         │
-        └── Pofyland sunucusu, yalnızca bu Mac'te (127.0.0.1:7433)
-              → tarayıcı, telefon (PWA) ve telefona bildirim (Tailscale üzerinden)
+        └── Pofyland server, on this Mac only (127.0.0.1:7433)
+              → browser, phone (PWA) and phone push (over Tailscale)
 ```
 
-Her şey senin Mac'inde çalışır. Oturum özetleri, komutlar ve dosya yolları hiçbir sunucuya gitmez; telefon bağlantısı Tailscale'in
-kendi şifreli ağı üzerinden yalnızca senin cihazlarınadır. Uygulama günde bir kez yalnızca bu depoya bakıp yeni sürüm var mı diye sorar.
+Everything runs on your Mac. Session summaries, commands and file paths never reach a server; the phone talks to the Mac directly over
+Tailscale's encrypted network, to your own devices only. Once a day the app checks this repo for a new version and nothing else.
 
-## Kurulum (tek komut)
+## Install (one command)
 
-**Gerekenler:** macOS 13 ve üstü, Apple Silicon ya da Intel. [Claude Code](https://claude.com/claude-code) kurulu olmalı
-(Terminal'de `claude` çalışıyor olmalı; yoksa Pofyland yine kurulur, eklentiyi sonra menüden kurarsın).
+**Requirements:** macOS 13 or newer, Apple Silicon or Intel. [Claude Code](https://claude.com/claude-code) installed
+(`claude` works in Terminal; without it Pofyland still installs and you add the plugin later from the menu).
 
-Terminal'i aç, şunu yapıştır, Enter'a bas:
+Open Terminal, paste, press Enter:
 
 ```sh
 curl -fsSL https://raw.githubusercontent.com/konuksev/Pofyland/main/install.sh | sh
 ```
 
-Betik en son sürümün dmg'sini indirir, **Pofyland**'ı **Applications**'a kopyalar, karantina damgasını kaldırır ve açar.
-`sudo` istemez, yalnızca uygulama klasörüne yazar. Bir dakikadan kısa sürer.
+The script downloads the latest release, copies **Pofyland** into **Applications**, clears the quarantine flag and opens it.
+No `sudo`; it only writes to the Applications folder. Under a minute.
 
-**İlk açılış** üç adımlık bir sihirbazdır:
-1. **Bildirimler:** izin ver ki bir Pofy seni beklerken haber gelsin.
-2. **Claude eklentisi:** "Eklentiyi kur"a bas. Açık Claude oturumların yeniden başlayınca denize gelir, yenileri hemen görünür.
-3. **Telefon:** Mac'e ve telefona [Tailscale](https://tailscale.com) kur, aynı hesapla gir, "Tailscale'e aç"a bas, çıkan QR'ı telefonla okut.
-   Safari'de Paylaş → Ana Ekrana Ekle dersen bildirimler de gelir. Bu adımı sonra da yapabilirsin: Pofyland menüsü → Kurulum adımları.
+**First launch** is a four-step guide:
 
-Sonra bir Claude Code oturumu aç ve ona bir iş ver: ilk Pofy denize gelir. Menü çubuğundaki Pofy'ye tıklamak denizi açar / kapatır;
-sağ tık liste görünümünü (bekleyenler, çalışanlar, bitenler) açar.
+<p align="center"><img src="docs/onboarding-en.png" width="520" alt="First launch: install the Claude plugin"></p>
 
-Seçenekler: `POFYLAND_VERSION=v1.0.1` (belirli sürüm), `POFYLAND_DEST=~/Applications`, `POFYLAND_NO_OPEN=1`.
+1. **Claude plugin:** press "Install plugin". Without it no session reaches the sea. Open Claude sessions appear after a restart, new ones right away.
+2. **Notifications:** allow them so you hear when a Pofy is waiting.
+3. **Phone:** install [Tailscale](https://tailscale.com) on the Mac and the phone, sign in with the same account, press "Open Pofyland on Tailscale",
+   scan the QR code. In Safari, Share → Add to Home Screen gives you notifications too. You can do this later: Pofyland menu → Setup steps.
+4. **Ready:** open a Claude Code session and give it a task. The line turns to "Pofy is in the sea" within seconds.
 
-## Elle kurulum
+Then: clicking the Pofy in the menu bar opens and closes the sea; right-click opens the list view (waiting, working, finished).
 
-1. [Son sürümden](https://github.com/konuksev/Pofyland/releases/latest) işlemcine uygun dosyayı indir: `Pofyland-…-arm64.dmg` (Apple Silicon)
-   ya da `Pofyland-…-x86_64.dmg` (Intel).
-2. Aç, **Pofyland**'ı **Applications** klasörüne sürükle.
-3. Uygulama henüz Apple imzalı değil, ilk açılışta macOS engeller: **Sistem Ayarları → Gizlilik ve Güvenlik**, en alttaki
-   *"Pofyland engellendi"* satırında **Yine de Aç**. Ya da Terminal'de: `xattr -dr com.apple.quarantine /Applications/Pofyland.app`
-4. Aç; ilk açılış sihirbazı yukarıdaki gibi.
+Options: `POFYLAND_VERSION=v1.0.3` (a specific version), `POFYLAND_DEST=~/Applications`, `POFYLAND_NO_OPEN=1`.
 
-## Güncelleme ve kaldırma
+## Manual install
 
-- Yeni sürüm çıkınca Pofyland bildirir (günde bir kez buraya bakar, kendiliğinden indirmez). Güncellemek için kurulum komutunu yeniden çalıştır.
-- Kaldırmak için Pofyland menüsü → **Kaldır**. Uygulamayı, arka plan sunucusunu ve Claude eklentisini kaldırır; istersen anahtarları ve ayarları da.
+1. From the [latest release](https://github.com/konuksev/Pofyland/releases/latest) download the file for your chip: `Pofyland-…-arm64.dmg` (Apple Silicon)
+   or `Pofyland-…-x86_64.dmg` (Intel).
+2. Open it and drag **Pofyland** into **Applications**.
+3. The app isn't Apple-signed yet, so macOS blocks the first launch: **System Settings → Privacy & Security**, the *"Pofyland was blocked"* row at the
+   bottom, **Open Anyway**. Or in Terminal: `xattr -dr com.apple.quarantine /Applications/Pofyland.app`
+4. Open it; the first-launch guide is as above.
 
-## Pofy gelmiyor? Tanı
+## Update and uninstall
 
-Claude, Codex ya da Antigravity oturumu açtın ama denizde Pofy yoksa, o Mac'te Terminal'e şunu yapıştır:
+- Pofyland tells you when a new version is out (it checks here once a day and never downloads on its own). To update, run the install command again.
+- To remove it: Pofyland menu → **Uninstall**. Removes the app, the background server and the Claude plugin; the keys and settings too if you choose.
+
+## No Pofy showing up? Diagnose
+
+You opened a Claude, Codex or Antigravity session but the sea stays empty. Paste this into Terminal on that Mac:
 
 ```sh
 curl -fsSL https://raw.githubusercontent.com/konuksev/Pofyland/main/doctor.sh | sh
 ```
 
-Hiçbir şeyi değiştirmez; uygulamayı, arka plan sunucusunu, Claude eklentisini ve Codex / Antigravity komutlarını denetler, ✓ / ✗ ile yazar.
-En sık neden Claude eklentisinin kurulmamış olmasıdır (sihirbazda "Eklentiyi kur" atlanmış ya da `claude` komutu yokmuş). Eksikse onarmak için:
+It changes nothing; it checks the app, the background server, the Claude plugin and the Codex / Antigravity commands and prints ✓ / ✗.
+The most common cause is the Claude plugin not being installed ("Install plugin" skipped in the guide, or `claude` missing). To repair:
 
 ```sh
 curl -fsSL https://raw.githubusercontent.com/konuksev/Pofyland/main/doctor.sh | sh -s -- --fix
 ```
 
-Eklenti kurulduktan sonra açık Claude oturumlarını ve Claude uygulamasını kapatıp yeniden aç; yeni oturumlar denize gelir.
-Çözülmezse çıktıyı olduğu gibi [Issue](https://github.com/konuksev/Pofyland/issues) olarak gönder.
+After the plugin is installed, restart open Claude sessions and the Claude app; new sessions come into the sea.
+Still stuck? Paste the output into an [issue](https://github.com/konuksev/Pofyland/issues).
 
-## Sık sorulanlar
+## FAQ
 
-**Pofy denize gelmiyor.** Eklenti kurulu mu: Pofyland menüsü → Kurulum adımları → "Claude eklentisi". Eklenti kurulduktan sonra açık
-oturumları yeniden başlatmak gerekir.
+**No Pofy appears.** Is the plugin installed: Pofyland menu → Setup steps → "Claude plugin". Sessions that were already open need a restart after the install.
 
-**Telefondan "Mac'e ulaşılamıyor" diyor.** Çoğu zaman kapağı kapalı Mac uykuya dalmıştır. Mac'i fişe takıp kapağı kapalıyken uyumasını
-kapat (Sistem Ayarları → Pil → Seçenekler, ya da Pofyland'ın Kurulum adımlarındaki güç ayarı). Tailscale iki cihazda da açık olmalı.
+**The phone says "Can't reach the Mac".** Usually the Mac with its lid closed went to sleep. Keep it on power and stop it sleeping with the lid closed
+(System Settings → Battery → Options, or the power setting in Pofyland's Setup steps). Tailscale must be on for both devices.
 
-**Verilerim nereye gidiyor?** Hiçbir yere. Sunucu yalnızca 127.0.0.1 dinler, telefon Tailscale ile doğrudan Mac'e bağlanır. Anahtarlar
-`~/Library/Application Support/PofyAqua` altında, yalnızca senin hesabının okuyabileceği izinlerle durur.
+**Where does my data go?** Nowhere. The server listens on 127.0.0.1 only; the phone connects straight to the Mac over Tailscale. Keys live under
+`~/Library/Application Support/PofyAqua`, readable only by your account.
 
-**Codex ve Antigravity de görünür mü?** Evet, köprüleri uygulamayla gelir; o uygulamalar açıksa oturumları da denize gelir.
+**Do Codex and Antigravity show up too?** Yes, their bridges ship with the app; when those apps are running their sessions come into the sea as well.
 
-## Sorun / öneri
+## Issues and ideas
 
-Bu depo yalnızca indirilecek sürümleri ve kurulum betiğini tutar; kaynak kod ayrı bir depodadır.
-Bir sorun ya da önerin varsa [Issue](https://github.com/konuksev/Pofyland/issues) aç.
+This repo holds the downloadable releases and the install scripts; the source lives in a separate repo.
+Found a problem or have an idea? Open an [issue](https://github.com/konuksev/Pofyland/issues).
