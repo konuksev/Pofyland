@@ -106,7 +106,7 @@ Options: `POFYLAND_VERSION=v1.0.3` (a specific version), `POFYLAND_DEST=~/Applic
 
 ## Update and uninstall
 
-- Pofyland tells you when a new version is out (it checks here once a day and never downloads on its own). To update, run the install command again.
+- Pofyland tells you when a new version is out (it checks here once a day). Pofyland menu → **Update** downloads it, swaps the app and reopens it; the Claude plugin is refreshed on the next launch. Running the install command again works too.
 - To remove it: Pofyland menu → **Uninstall**. Removes the app, the background server and the Claude plugin; the keys and settings too if you choose.
 
 ## No Pofy showing up? Diagnose

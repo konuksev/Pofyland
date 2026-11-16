@@ -98,7 +98,7 @@ Seçenekler: `POFYLAND_VERSION=v1.0.1` (belirli sürüm), `POFYLAND_DEST=~/Appli
 
 ## Güncelleme ve kaldırma
 
-- Yeni sürüm çıkınca Pofyland bildirir (günde bir kez buraya bakar, kendiliğinden indirmez). Güncellemek için kurulum komutunu yeniden çalıştır.
+- Yeni sürüm çıkınca Pofyland bildirir (günde bir kez buraya bakar). Pofyland menüsü → **Güncelle** indirir, uygulamayı değiştirir ve yeniden açar; Claude eklentisi bir sonraki açılışta kendiliğinden yenilenir. Kurulum komutunu yeniden çalıştırmak da olur.
 - Kaldırmak için Pofyland menüsü → **Kaldır**. Uygulamayı, arka plan sunucusunu ve Claude eklentisini kaldırır; istersen anahtarları ve ayarları da.
 
 ## Pofy gelmiyor? Tanı
