@@ -13,6 +13,7 @@ separate repo. That still leaves plenty to do here.
 - **Suggest an idea:** [open a feature request](https://github.com/konuksev/Pofyland/issues/new?template=feature_request.yml),
   or start a thread in [Discussions](https://github.com/konuksev/Pofyland/discussions) if it is still fuzzy.
 - **Ask a question or show your sea:** [Discussions](https://github.com/konuksev/Pofyland/discussions).
+- **Chat, get quick help, hear about new releases:** the [Telegram group](https://t.me/+nYWyvW484xxmYjBk).
 - **Improve the docs or the scripts:** pull requests are welcome (see below).
 - **Security problems:** never in a public issue; see [SECURITY.md](SECURITY.md).
 

@@ -5,7 +5,7 @@ Each Claude Code session (Codex and Antigravity too) is a "Pofy": the ones worki
 answer come up to the glass and call you, the finished ones settle on the bottom. You see who is doing what and who is waiting
 without hopping between windows, and you answer from your Mac or your phone.
 
-[Türkçe](README.tr.md)
+[Türkçe](README.tr.md) · [Telegram community](https://t.me/+nYWyvW484xxmYjBk)
 
 ![One terminal, then a dozen. Which one is waiting for you? In Pofyland every agent becomes a Pofy.](docs/pofyland-kaos.gif)
 
@@ -143,6 +143,7 @@ Still stuck? Paste the output into an [issue](https://github.com/konuksev/Pofyla
 
 This repo holds the downloadable releases and the install scripts; the source lives in a separate repo.
 Found a problem? Open a [bug report](https://github.com/konuksev/Pofyland/issues/new?template=bug_report.yml).
+Chat with other users, get quick help and hear about new releases in the [Telegram group](https://t.me/+nYWyvW484xxmYjBk).
 Have an idea or a question? Start a thread in [Discussions](https://github.com/konuksev/Pofyland/discussions); see what's planned on the
 [roadmap](https://github.com/users/konuksev/projects). How to help: [CONTRIBUTING.md](CONTRIBUTING.md). Security problems: [SECURITY.md](SECURITY.md).
 

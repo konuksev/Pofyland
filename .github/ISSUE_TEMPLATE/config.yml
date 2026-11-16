@@ -3,6 +3,9 @@ contact_links:
   - name: Question or idea (Discussions)
     url: https://github.com/konuksev/Pofyland/discussions
     about: Ask how something works, share your setup, or float an idea before it becomes a request.
+  - name: Chat and quick help (Telegram)
+    url: https://t.me/+nYWyvW484xxmYjBk
+    about: Talk with other Pofyland users and hear about new releases.
   - name: Security problem
     url: https://github.com/konuksev/Pofyland/security/advisories/new
     about: Report it privately, not in a public issue.

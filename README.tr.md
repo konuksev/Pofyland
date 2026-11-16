@@ -5,6 +5,8 @@ Claude Code (ayrıca Codex ve Antigravity) oturumlarının her biri bir "Pofy"di
 cama gelip seslenir, işi biten dibe iner. Pencereler arasında dolaşmadan kimin ne yaptığını ve kimin seni beklediğini bir bakışta
 görürsün; bekleyene Mac'ten ya da telefonundan cevap verirsin.
 
+[English](README.md) · [Telegram topluluğu](https://t.me/+nYWyvW484xxmYjBk)
+
 ![Bir terminal, sonra bir düzine. Hangisi seni bekliyor? Pofyland'da her ajan bir Pofy olur.](docs/pofyland-kaos-tr.gif)
 
 ## Kimin için
@@ -136,6 +138,7 @@ kapat (Sistem Ayarları → Pil → Seçenekler, ya da Pofyland'ın Kurulum adı
 
 Bu depo yalnızca indirilecek sürümleri ve kurulum betiğini tutar; kaynak kod ayrı bir depodadır.
 Bir sorun bulduysan [hata bildirimi](https://github.com/konuksev/Pofyland/issues/new?template=bug_report.yml) aç.
+Diğer kullanıcılarla sohbet, hızlı yardım ve yeni sürüm duyuruları için [Telegram grubuna](https://t.me/+nYWyvW484xxmYjBk) katıl.
 Fikir ya da soru için [Discussions](https://github.com/konuksev/Pofyland/discussions)'ta konu başlat; planlananlar
 [yol haritasında](https://github.com/users/konuksev/projects). Nasıl yardım edilir: [CONTRIBUTING.md](CONTRIBUTING.md). Güvenlik sorunları: [SECURITY.md](SECURITY.md).
 
