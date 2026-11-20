@@ -1,0 +1,11 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PoflowGrowth sign-in</title><link rel="stylesheet" href="../style.css"></head><body><main>
+<h1>Finishing sign-in…</h1><p id="msg">Returning to PoflowGrowth on this computer.</p>
+<script>
+// Platform giriş dönüşü: kodu bu bilgisayarda bekleyen PoflowGrowth'a (127.0.0.1) iletir. Kod tek kullanımlıktır.
+(function(){var q=location.search;var p=new URLSearchParams(q);
+if(!p.get("code")&&!p.get("error")){document.getElementById("msg").textContent="Nothing to do here.";return;}
+var port=(p.get("state")||"").split(".")[0];if(!/^\d{4,5}$/.test(port))port="8789";
+location.replace("http://127.0.0.1:"+port+"/oauth/callback"+q);})();
+</script>
+<p style="font-size:14px">If nothing happens, make sure PoflowGrowth's sign-in is still waiting and try again.</p>
+</main></body></html>
